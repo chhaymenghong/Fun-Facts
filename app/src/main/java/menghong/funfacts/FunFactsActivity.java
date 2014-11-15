@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 
 public class FunFactsActivity extends Activity {
-    private FactBook factBook = new FactBook();
+    private JsonParserOperation factsBook = new JsonParserOperation();
     private ColorWheel colorWheel = new ColorWheel();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class FunFactsActivity extends Activity {
             // This method will get executed when user clicks on this button
             public void onClick(View view) {
                 // Update the factLabel
-                factLabel.setText(factBook.getFact());
+                factLabel.setText(factsBook.getFact());
                 int colorForBoth = colorWheel.getColor();
                 overallLayOut.setBackgroundColor(colorForBoth);
                 showFactButton.setTextColor(colorForBoth);

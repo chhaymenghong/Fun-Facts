@@ -15,5 +15,4 @@ public class ColorWheel {
         //Converts hexadecimal string into hexadecimal color as integer
         return Color.parseColor(colors[randNum]);
     }
-
 }
