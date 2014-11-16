@@ -41,7 +41,8 @@ public class JsonParserOperation {
                 JSONObject dataObject = (JSONObject) listFactObject.get(i);
                 JSONArray factArray = (JSONArray)dataObject.get("facts");
                 String eachFact = (String) factArray.get(0);
-                 listOfFacts.add(eachFact);
+                if (eachFact.length() < 70)
+                    listOfFacts.add(eachFact);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
